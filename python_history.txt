@@ -1,0 +1,29 @@
+import openaq
+pip install py-openaq
+exit
+import openaq
+api = openaq.OpenAQ()
+status, body = api.cities()
+status
+body
+status, body = api.measurements(city='Los Angeles', parameter='pm25')
+status
+body['meta']
+len(body['results'])
+body['results'][:2]
+status, body = api.measurements(city='Los Angeles', parameter='pm25')
+import openaq
+api = openaq.OpenAQ()
+status, body = api.countries()
+status
+body['meta']
+len(body['results'])
+body['results'][:1]
+body['results'][:0]
+body['results'][:2]
+body['results'][1:2]
+body['results'][1:3]
+body['results'][1]
+body['results'][:1]
+import readline
+readline.write_history_file('python_history.txt')
